@@ -1,0 +1,58 @@
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+const itemSchema = new Schema({
+    category:{
+        type:String,
+        required:true
+    },
+    brand:{
+        type:String,
+        required:true
+    },
+    productName:{
+        type:String,
+        required:true
+    },
+    price:{
+        type:Number,
+        required:true
+    },
+    camera:{
+        type:Object
+    },
+    Display:{
+        type:String
+    },
+    Battery:{
+        type:String
+    },
+    Generation:{
+        type:String
+    },
+    Processor:{
+        type:String
+    },
+    memory:{
+        type:Array
+    },
+    screen:{
+        type:String
+    },
+    HDD_capacity:{
+        type:String
+    },
+    Operating_system:{
+        type:String
+    },
+    Battery_cell:{
+        type:Number
+    },
+    SSD_capacity:{
+        type:String
+    },
+    seller:{
+        type:String,
+        required:true
+    }
+})
+module.exports = item = mongoose.model('flipkarts',itemSchema)
